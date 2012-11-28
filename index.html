@@ -1,16 +1,16 @@
 <!DOCTYPE html> 
 <html> 
 <head> 
-<script>
-	var subContent = [
-		{ "caption": "Bench", "href": "#bar" ,"data-theme": "c", "data-transition": "pop"},
-		{ "caption": "Hand Cleans", "href": "#bar" ,"data-theme": "b", "data-transition": "flip" },
-		{ "caption": "Deadlift", "href": "#bar" ,"data-theme": "a", "data-transition": "flip" },
-		{ "caption": "Jogging", "href": "#bar" ,"data-theme": "e", "data-transition": "flip" },
-		{ "caption": "Cleans", "href": "#bar" ,"data-theme": "d", "data-transition": "flip" }
-		//{ "caption": "", "href": "#" ,"data-theme": "", "data-transition": "" },
-	];
-</script>
+	<script>
+		var subContent = [
+			{ "caption": "Bench", "href": "#bench" ,"data-theme": "c", "data-transition": "pop"},
+			{ "caption": "Hand Cleans", "href": "#bar" ,"data-theme": "b", "data-transition": "flip" },
+			{ "caption": "Deadlift", "href": "#deadlift" ,"data-theme": "a", "data-transition": "flip" },
+			{ "caption": "Jogging", "href": "#bar" ,"data-theme": "e", "data-transition": "flip" },
+			{ "caption": "Cleans", "href": "#bar" ,"data-theme": "d", "data-transition": "flip" }
+			//{ "caption": "", "href": "#" ,"data-theme": "", "data-transition": "" },
+		];
+	</script>
 
 	<title>pumpTracker</title>
 	
@@ -20,13 +20,20 @@
 	<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
 
+	<style>
+		.micro { font-size: 0.5em; }
+		.small { font-size: 0.65em; }
+		.smallish { font-size: 0.85em; }
+		.big { font-size: 1.2em; }
+	</style>
+
 
 </head> 
 
 <body> 
 
 <!-- Start of first page -->
-<div data-role="page" id="foo">
+<div data-role="page" id="menu">
 
 	<div data-role="header">
 		<h1>Le Menu</h1>
@@ -56,20 +63,93 @@
 </div><!-- /page -->
 
 
-<!-- Start of second page -->
-<div data-role="page" id="bar">
 
-	<div data-role="header">
-		<h1>Bar</h1>
+
+
+<!-- Start of DL page -->
+<div data-role="page" id="deadlift">
+
+	<div data-role="header" data-theme="a">
+		<h1>Deadlift</h1>
 	</div><!-- /header -->
 
 	<div data-role="content">	
-		<p>I'm the second in the source order so I'm hidden when the page loads. I'm just shown if a link that references my id is beeing clicked.</p>		
-		<p><a href="#foo">Back to foo</a></p>	
+		<p>So you did some deadlifts, huh? Goodboy.</p>
+
+		<div class="ui-grid-b smallish">
+			<div class="ui-block-a">Set #1</div>
+			<div class="ui-block-b">Reps: <input type=edit size=5 name=set1_reps></div>
+			<div class="ui-block-c">Weight: <input type=edit size=5 name=set1_weight></div>
+		</div>
+
+		<div class="ui-grid-b smallish">
+			<div class="ui-block-a">Set #2</div>
+			<div class="ui-block-b">Reps: <input type=edit size=5 name=set2_reps></div>
+			<div class="ui-block-c">Weight: <input type=edit size=5 name=set2_weight></div>
+		</div>
+
+
+		<div class="ui-grid-b smallish">
+			<div class="ui-block-a">Set #3</div>
+			<div class="ui-block-b">Reps: <input type=edit size=5 name=set3_reps></div>
+			<div class="ui-block-c">Weight: <input type=edit size=5 name=set3_weight></div>
+		</div>
+
+
+		<div class="ui-grid-b smallish">
+			<div class="ui-block-a">Set #4</div>
+			<div class="ui-block-b">Reps: <input type=edit size=5 name=set4_reps></div>
+			<div class="ui-block-c">Weight: <input type=edit size=5 name=set4_weight></div>
+		</div>
+
+
+		<div class="ui-grid-b smallish">
+			<div class="ui-block-a">Set #5</div>
+			<div class="ui-block-b">Reps: <input type=edit size=5 name=set5_reps></div>
+			<div class="ui-block-c">Weight: <input type=edit size=5 name=set5_weight></div>
+		</div>
+
+
+		<br>
+
+
+
+		<div class="ui-grid-solo">
+			<div class="ui-block-a"><button type="v" data-theme="a">Submit</button></div>
+		</div>
+
+		<br><br>
+
+		<div class="ui-grid-solo">
+			<div class="ui-block-a"><a href="#menu" data-role="button" data-rel="back" data-theme="b">Go Back</a></div>
+		</div>
+
 	</div><!-- /content -->
 
-	<div data-role="footer">
+
+</div><!-- /page -->
+
+
+
+<!-- Start of BENCH page -->
+<div data-role="page" id="bench">
+
+	<div data-role="header" data-theme="c">
+		<h1>Bench Press</h1>
+	</div><!-- /header -->
+
+	<div data-role="content">	
+		<p>So you did some bench press, huh?</p>
+		<p><a href="#menu">Back to the Le Menu</a></p>	
+	</div><!-- /content -->
+
+	<div data-role="footer" data-theme="c">
 		<h4>Page Footer</h4>
 	</div><!-- /footer -->
 </div><!-- /page -->
+
+
+
+
+
 </body>
