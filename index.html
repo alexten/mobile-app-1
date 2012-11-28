@@ -22,7 +22,7 @@
 
 	<style>
 		.micro { font-size: 0.5em; }
-		.small { font-size: 0.65em; }
+		.small { font-size: 0.75em; }
 		.smallish { font-size: 0.85em; }
 		.big { font-size: 1.2em; }
 	</style>
@@ -73,39 +73,42 @@
 		<h1>Deadlift</h1>
 	</div><!-- /header -->
 
-	<div data-role="content">	
-		<p>So you did some deadlifts, huh? Goodboy.</p>
+	<div data-role="content">
 
-		<div class="ui-grid-b smallish">
+		<p>
+			<input type="checkbox" name="checkbox-0" id="checkbox-mini-0" class="custom" data-mini="true" data-theme="e" /><label for="checkbox-mini-0">Warm-up</label>
+		</p>
+
+		<div class="ui-grid-b small">
 			<div class="ui-block-a">Set #1</div>
-			<div class="ui-block-b">Reps: <input type=edit size=5 name=set1_reps></div>
+			<div class="ui-block-b">Reps: <input type=edit size=5 name=set1_reps value='5'></div>
 			<div class="ui-block-c">Weight: <input type=edit size=5 name=set1_weight></div>
 		</div>
 
-		<div class="ui-grid-b smallish">
+		<div class="ui-grid-b small">
 			<div class="ui-block-a">Set #2</div>
-			<div class="ui-block-b">Reps: <input type=edit size=5 name=set2_reps></div>
+			<div class="ui-block-b">Reps: <input type=edit size=5 name=set2_reps value='5'></div>
 			<div class="ui-block-c">Weight: <input type=edit size=5 name=set2_weight></div>
 		</div>
 
 
-		<div class="ui-grid-b smallish">
+		<div class="ui-grid-b small">
 			<div class="ui-block-a">Set #3</div>
-			<div class="ui-block-b">Reps: <input type=edit size=5 name=set3_reps></div>
+			<div class="ui-block-b">Reps: <input type=edit size=5 name=set3_reps value='5'></div>
 			<div class="ui-block-c">Weight: <input type=edit size=5 name=set3_weight></div>
 		</div>
 
 
-		<div class="ui-grid-b smallish">
+		<div class="ui-grid-b small">
 			<div class="ui-block-a">Set #4</div>
-			<div class="ui-block-b">Reps: <input type=edit size=5 name=set4_reps></div>
+			<div class="ui-block-b">Reps: <input type=edit size=5 name=set4_reps value='5'></div>
 			<div class="ui-block-c">Weight: <input type=edit size=5 name=set4_weight></div>
 		</div>
 
 
-		<div class="ui-grid-b smallish">
+		<div class="ui-grid-b small">
 			<div class="ui-block-a">Set #5</div>
-			<div class="ui-block-b">Reps: <input type=edit size=5 name=set5_reps></div>
+			<div class="ui-block-b">Reps: <input type=edit size=5 name=set5_reps value='5'></div>
 			<div class="ui-block-c">Weight: <input type=edit size=5 name=set5_weight></div>
 		</div>
 
@@ -121,7 +124,7 @@
 		<br><br>
 
 		<div class="ui-grid-solo">
-			<div class="ui-block-a"><a href="#menu" data-role="button" data-rel="back" data-theme="b">Go Back</a></div>
+				<a href="#menu" data-role="button" data-rel="back" data-theme="b">Le Menu</a></div>
 		</div>
 
 	</div><!-- /content -->
@@ -139,7 +142,7 @@
 
 	<div data-role="content">	
 		<p>So you did some bench press, huh?</p>
-		<p><a href="#menu">Back to the Le Menu</a></p>	
+		<p><a href="#menu">Back to the Le Menu</a></p>
 	</div><!-- /content -->
 
 	<div data-role="footer" data-theme="c">
