@@ -58,10 +58,6 @@
 
 
 	</div><!-- /content -->
-
-	<div data-role="footer">
-		<h4>Do we need this?</h4>
-	</div><!-- /footer -->
 </div><!-- /page -->
 
 
@@ -78,7 +74,7 @@
 	<div data-role="content">
 
 		<div class="ui-grid-a small">
-			<div class="ui-block-a"><input type="text" name="self_weight" placeholder='Self Weight' data-mini="true" style='text-align: center; width: 80%;' /></div>
+			<div class="ui-block-a"><input type="text" name="self_weight" placeholder='Self Weight' data-mini="true" style='width: 80%;' /></div>
 
 			<div class="ui-block-b" style='text-align: right; width: 45%;'>
 				<input type="checkbox" name="checkbox-0" id="checkbox-mini-0" class="custom" data-mini="true" data-theme="e" />
@@ -104,11 +100,44 @@
 
 		<p></p>
 
-		<div class="ui-grid-b small">
-			<div class="ui-block-a">Set #1</div>
-			<div class="ui-block-b">Reps: <input type=edit size=5 name=set1_reps value='5'></div>
-			<div class="ui-block-c">Weight: <input type=edit size=5 name=set1_weight></div>
+		<div class="ui-grid-a small">
+			<div class="ui-block-a"><input type=number name=set1_reps value='' style="width:85%;" placeholder="Set#1, Reps" data-mini="true" /></div>
+			<div class="ui-block-b"><input type=number name=set1_weights value='' style="width:85%;" placeholder="Set#1, Weights" data-mini="true" /></div>
 		</div>
+
+
+		<div class="ui-grid-a small">
+			<div class="ui-block-a"><input type=number name=set2_reps value='' style="width:85%;" placeholder="Set#2, Reps" data-mini="true" /></div>
+			<div class="ui-block-b"><input type=number name=set2_weights value='' style="width:85%;" placeholder="Set#2, Weights" data-mini="true" /></div>
+		</div>
+
+
+		<div class="ui-grid-a small">
+			<div class="ui-block-a"><input type=number name=set3_reps value='' style="width:85%;" placeholder="Set#3, Reps" data-mini="true" /></div>
+			<div class="ui-block-b"><input type=number name=set3_weights value='' style="width:85%;" placeholder="Set#3, Weights" data-mini="true" /></div>
+		</div>
+
+
+		<div class="ui-grid-a small">
+			<div class="ui-block-a"><input type=number name=set4_reps value='' style="width:85%;" placeholder="Set#4, Reps" data-mini="true" /></div>
+			<div class="ui-block-b"><input type=number name=set4_weights value='' style="width:85%;" placeholder="Set#4, Weights" data-mini="true" /></div>
+		</div>
+
+
+		<div class="ui-grid-a small">
+			<div class="ui-block-a"><input type=number name=set5_reps value='' style="width:85%;" placeholder="Set#5, Reps" data-mini="true" /></div>
+			<div class="ui-block-b"><input type=number name=set5_weights value='' style="width:85%;" placeholder="Set#5, Weights" data-mini="true" /></div>
+		</div>
+
+		<p></p>
+
+		<div class="ui-grid-b">
+			<div class="ui-block-a"><button type="v" data-theme="a" data-mini="true" style="width:15%; padding:0px; margin-left:-10px;">Submit</button></div>
+			<div class="ui-block-b">&nbsp;</div>
+			<div class="ui-block-c" style="width:30%;"><a href="#menu" data-role="button" data-rel="back" data-theme="b" data-mini="true" >Le Menu</a></div>
+		</div>
+
+		<!--
 
 		<div class="ui-grid-b small">
 			<div class="ui-block-a">Set #2</div>
@@ -137,20 +166,12 @@
 			<div class="ui-block-c">Weight: <input type=edit size=5 name=set5_weight></div>
 		</div>
 
+		<a href="#dl_weight_popup" data-rel="popup" data-position-to="window">Open Popup</a>
 
-		<br>
-
-
-
-		<div class="ui-grid-solo">
-			<div class="ui-block-a"><button type="v" data-theme="a">Submit</button></div>
+		<div data-role="popup" id="dl_weight_popup" style='width: 300px;' class="ui-content">
+			<input type="range" id="dl-popup-slider" value="170" min="170" max="300" class="small" />
 		</div>
-
-		<br><br>
-
-		<div class="ui-grid-solo">
-				<a href="#menu" data-role="button" data-rel="back" data-theme="b">Le Menu</a></div>
-		</div>
+		-->
 
 	</div><!-- /content -->
 </div>
@@ -167,12 +188,16 @@
 
 	<div data-role="content">	
 		<p>So you did some bench press, huh?</p>
+
+
+		<label for="slider-1">Input slider:</label><input type="range" name="slider-1" id="slider-1" value="60" min="0" max="100" />
+
+
+		<label for="slider-fill">Input slider:</label><input type="range" name="slider-fill" id="slider-fill" value="60" min="0" max="100" data-highlight="true" />
+
 		<p><a href="#menu">Back to the Le Menu</a></p>
 	</div><!-- /content -->
 
-	<div data-role="footer" data-theme="c">
-		<h4>Page Footer</h4>
-	</div><!-- /footer -->
 </div>
 <!-- /page -->
 
