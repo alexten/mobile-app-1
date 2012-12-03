@@ -6,7 +6,7 @@
 			{ "caption": "Bench", "href": "#bench" ,"data-theme": "c", "data-transition": "pop"},
 			{ "caption": "Hand Cleans", "href": "#bar" ,"data-theme": "b", "data-transition": "flip" },
 			{ "caption": "Deadlift", "href": "#deadlift" ,"data-theme": "a", "data-transition": "flip" },
-			{ "caption": "Jogging", "href": "#bar" ,"data-theme": "e", "data-transition": "flip" },
+			{ "caption": "Jogging", "href": "#jogging" ,"data-theme": "e", "data-transition": "flip" },
 			{ "caption": "Cleans", "href": "#bar" ,"data-theme": "d", "data-transition": "flip" }
 			//{ "caption": "", "href": "#" ,"data-theme": "", "data-transition": "" },
 		];
@@ -82,23 +82,7 @@
 			</div>
 		</div>
 
-		<!--
-		<div class="ui-grid-a small">
-			<div class="ui-block-a"><input type="text" name="self_weight" placeholder='Self Weight' data-mini="true" style='text-align: center; width: 80%;' /></div>
-
-			<div class="ui-block-b">
-				<div class="containing-element">
-					<select name="flip-min" id="flip-min" data-role="slider">
-						<option value="off">Warmed up?</option>
-						<option value="on">Warmed up</option>
-					</select>
-				</div>
-			</div>
-		</div>
-		-->
-
-
-		<p></p>
+		<br>
 
 		<div class="ui-grid-a small">
 			<div class="ui-block-a"><input type=number name=set1_reps value='' style="width:85%;" placeholder="Set#1, Reps" data-mini="true" /></div>
@@ -129,7 +113,7 @@
 			<div class="ui-block-b"><input type=number name=set5_weights value='' style="width:85%;" placeholder="Set#5, Weights" data-mini="true" /></div>
 		</div>
 
-		<p></p>
+		<br><br>
 
 		<div class="ui-grid-b">
 			<div class="ui-block-a"><button type="v" data-theme="a" data-mini="true" style="width:15%; padding:0px; margin-left:-10px;">Submit</button></div>
@@ -137,41 +121,6 @@
 			<div class="ui-block-c" style="width:30%;"><a href="#menu" data-role="button" data-rel="back" data-theme="b" data-mini="true" >Le Menu</a></div>
 		</div>
 
-		<!--
-
-		<div class="ui-grid-b small">
-			<div class="ui-block-a">Set #2</div>
-			<div class="ui-block-b">Reps: <input type=edit size=5 name=set2_reps value='5'></div>
-			<div class="ui-block-c">Weight: <input type=edit size=5 name=set2_weight></div>
-		</div>
-
-
-		<div class="ui-grid-b small">
-			<div class="ui-block-a">Set #3</div>
-			<div class="ui-block-b">Reps: <input type=edit size=5 name=set3_reps value='5'></div>
-			<div class="ui-block-c">Weight: <input type=edit size=5 name=set3_weight></div>
-		</div>
-
-
-		<div class="ui-grid-b small">
-			<div class="ui-block-a">Set #4</div>
-			<div class="ui-block-b">Reps: <input type=edit size=5 name=set4_reps value='5'></div>
-			<div class="ui-block-c">Weight: <input type=edit size=5 name=set4_weight></div>
-		</div>
-
-
-		<div class="ui-grid-b small">
-			<div class="ui-block-a">Set #5</div>
-			<div class="ui-block-b">Reps: <input type=edit size=5 name=set5_reps value='5'></div>
-			<div class="ui-block-c">Weight: <input type=edit size=5 name=set5_weight></div>
-		</div>
-
-		<a href="#dl_weight_popup" data-rel="popup" data-position-to="window">Open Popup</a>
-
-		<div data-role="popup" id="dl_weight_popup" style='width: 300px;' class="ui-content">
-			<input type="range" id="dl-popup-slider" value="170" min="170" max="300" class="small" />
-		</div>
-		-->
 
 	</div><!-- /content -->
 </div>
@@ -179,23 +128,50 @@
 
 
 
-<!-- Start of BENCH page -->
-<div data-role="page" id="bench">
 
-	<div data-role="header" data-theme="c">
-		<h1>Bench Press</h1>
+
+
+
+
+
+
+
+
+<!-- Start of Jogging page -->
+<div data-role="page" id="jogging">
+
+	<div data-role="header" data-theme="e">
+		<h1>Jogging</h1>
 	</div><!-- /header -->
 
-	<div data-role="content">	
-		<p>So you did some bench press, huh?</p>
+	<div data-role="content" style="text-align:center;">
 
+		<br>
 
-		<label for="slider-1">Input slider:</label><input type="range" name="slider-1" id="slider-1" value="60" min="0" max="100" />
+		<fieldset data-role="controlgroup" data-mini="false" data-type="horizontal">
 
+			<input type="radio" name="radio-mini" id="radio-mini-0" value="40"  />
+			<label for="radio-mini-0">40m</label>
 
-		<label for="slider-fill">Input slider:</label><input type="range" name="slider-fill" id="slider-fill" value="60" min="0" max="100" data-highlight="true" />
+			<input type="radio" name="radio-mini" id="radio-mini-1" value="45" checked="checked" />
+			<label for="radio-mini-1">45m</label>
 
-		<p><a href="#menu">Back to the Le Menu</a></p>
+			<input type="radio" name="radio-mini" id="radio-mini-2" value="50"  />
+			<label for="radio-mini-2">50m</label>
+			
+			<input type="radio" name="radio-mini" id="radio-mini-3" value="55"  />
+			<label for="radio-mini-3">55m</label>
+
+		</fieldset>
+
+		<br><br>
+
+		<div class="ui-grid-a">
+			<div class="ui-block-a"><button type="v" data-theme="a" data-mini="true" style="width:15%; padding:0px; margin-left:-10px;">Submit</button></div>
+			
+			<div class="ui-block-b"><a href="#menu" data-role="button" data-rel="back" data-theme="b" data-mini="true" >Le Menu</a></div>
+		
+		</div>
 	</div><!-- /content -->
 
 </div>
