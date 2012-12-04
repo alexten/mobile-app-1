@@ -4,10 +4,10 @@
 	<script>
 		var subContent = [
 			{ "caption": "Bench", "href": "#bench" ,"data-theme": "c", "data-transition": "pop"},
-			{ "caption": "Hand Cleans", "href": "#bar" ,"data-theme": "b", "data-transition": "flip" },
+			{ "caption": "Hand Cleans", "href": "#handcleans" ,"data-theme": "b", "data-transition": "slideup" },
 			{ "caption": "Deadlift", "href": "#deadlift" ,"data-theme": "a", "data-transition": "flip" },
-			{ "caption": "Jogging", "href": "#jogging" ,"data-theme": "e", "data-transition": "flip" },
-			{ "caption": "Cleans", "href": "#bar" ,"data-theme": "d", "data-transition": "flip" }
+			{ "caption": "Jogging", "href": "#jogging" ,"data-theme": "e", "data-transition": "flow" },
+			{ "caption": "Cleans", "href": "#cleans" ,"data-theme": "d", "data-transition": "turn" }
 			//{ "caption": "", "href": "#" ,"data-theme": "", "data-transition": "" },
 		];
 	</script>
@@ -80,7 +80,7 @@
 	<div data-role="content">
 
 		<div class="ui-grid-a small">
-			<div class="ui-block-a"><input type="text" name="self_weight" placeholder='Self Weight' data-mini="true" style='width: 80%;' /></div>
+			<div class="ui-block-a"><input type="number" name="self_weight" placeholder='Self Weight' data-mini="true" style='width: 80%;' /></div>
 
 			<div class="ui-block-b" style='text-align: right; width: 43%;'>
 				<input type="checkbox" name="checkbox-0" id="checkbox-mini-0" class="custom" data-mini="true" data-theme="e" />
@@ -159,7 +159,7 @@
 
 
 
-<!-- Start of Bench page -->
+<!-- Start of Handcleans page -->
 <div data-role="page" id="handcleans">
 
 	<div data-role="header" data-theme="b">
@@ -169,7 +169,7 @@
 	<div data-role="content">
 
 		<div class="ui-grid-a small">
-			<div class="ui-block-a"><input type="text" name="self_weight" placeholder='Self Weight' data-mini="true" style='width: 80%;' /></div>
+			<div class="ui-block-a"><input type="number" name="self_weight" placeholder='Self Weight' data-mini="true" style='width: 80%;' /></div>
 
 			<div class="ui-block-b" style='text-align: right; width: 43%;'>
 				<input type="checkbox" name="checkbox-0" id="checkbox-mini-0" class="custom" data-mini="true" data-theme="e" />
@@ -248,6 +248,7 @@
 
 
 
+
 <!-- Start of DL page -->
 <div data-role="page" id="deadlift">
 
@@ -258,7 +259,7 @@
 	<div data-role="content">
 
 		<div class="ui-grid-a small">
-			<div class="ui-block-a"><input type="text" name="self_weight" placeholder='Self Weight' data-mini="true" style='width: 80%;' /></div>
+			<div class="ui-block-a"><input type="number" name="self_weight" placeholder='Self Weight' data-mini="true" style='width: 80%;' /></div>
 
 			<div class="ui-block-b" style='text-align: right; width: 43%;'>
 				<input type="checkbox" name="checkbox-0" id="checkbox-mini-0" class="custom" data-mini="true" data-theme="e" />
@@ -337,6 +338,92 @@
 
 
 
+<!-- Start of Cleans page -->
+<div data-role="page" id="cleans">
+
+	<div data-role="header" data-theme="c">
+		<h1>Cleans</h1>
+	</div><!-- /header -->
+
+	<div data-role="content">
+
+		<div class="ui-grid-a small">
+			<div class="ui-block-a"><input type="number" name="self_weight" placeholder='Self Weight' data-mini="true" style='width: 80%;' /></div>
+
+			<div class="ui-block-b" style='text-align: right; width: 43%;'>
+				<input type="checkbox" name="checkbox-0" id="checkbox-mini-0" class="custom" data-mini="true" data-theme="e" />
+				<label for="checkbox-mini-0">Warm-up</label>
+			</div>
+		</div>
+
+		<br>
+
+		<div class="ui-grid-a small">
+			<div class="ui-block-a"><input type=number name=set1_reps value='' style="width:85%;" placeholder="Set#1, Reps" data-mini="true" /></div>
+			<div class="ui-block-b"><input type=number name=set1_weights value='' style="width:85%;" placeholder="Set#1, Weights" data-mini="true" /></div>
+		</div>
+
+
+		<div class="ui-grid-a small">
+			<div class="ui-block-a"><input type=number name=set2_reps value='' style="width:85%;" placeholder="Set#2, Reps" data-mini="true" /></div>
+			<div class="ui-block-b"><input type=number name=set2_weights value='' style="width:85%;" placeholder="Set#2, Weights" data-mini="true" /></div>
+		</div>
+
+
+		<div class="ui-grid-a small">
+			<div class="ui-block-a"><input type=number name=set3_reps value='' style="width:85%;" placeholder="Set#3, Reps" data-mini="true" /></div>
+			<div class="ui-block-b"><input type=number name=set3_weights value='' style="width:85%;" placeholder="Set#3, Weights" data-mini="true" /></div>
+		</div>
+
+
+		<div class="ui-grid-a small">
+			<div class="ui-block-a"><input type=number name=set4_reps value='' style="width:85%;" placeholder="Set#4, Reps" data-mini="true" /></div>
+			<div class="ui-block-b"><input type=number name=set4_weights value='' style="width:85%;" placeholder="Set#4, Weights" data-mini="true" /></div>
+		</div>
+
+
+		<div class="ui-grid-a small">
+			<div class="ui-block-a"><input type=number name=set5_reps value='' style="width:85%;" placeholder="Set#5, Reps" data-mini="true" /></div>
+			<div class="ui-block-b"><input type=number name=set5_weights value='' style="width:85%;" placeholder="Set#5, Weights" data-mini="true" /></div>
+		</div>
+
+
+		<div class="ui-grid-a small hide" id='cl_set_6'>
+			<div class="ui-block-a"><input type=number name=set6_reps value='' style="width:85%;" placeholder="Set#6, Reps" data-mini="true" /></div>
+			<div class="ui-block-b"><input type=number name=set6_weights value='' style="width:85%;" placeholder="Set#6, Weights" data-mini="true" /></div>
+		</div>
+
+
+		<div class="ui-grid-a small hide" id='cl_set_7'>
+			<div class="ui-block-a"><input type=number name=set7_reps value='' style="width:85%;" placeholder="Set#7, Reps" data-mini="true" /></div>
+			<div class="ui-block-b"><input type=number name=set7_weights value='' style="width:85%;" placeholder="Set#7, Weights" data-mini="true" /></div>
+		</div>
+
+
+		<div class="ui-grid-a small hide" id='cl_set_8'>
+			<div class="ui-block-a"><input type=number name=set8_reps value='' style="width:85%;" placeholder="Set#8, Reps" data-mini="true" /></div>
+			<div class="ui-block-b"><input type=number name=set8_weights value='' style="width:85%;" placeholder="Set#8, Weights" data-mini="true" /></div>
+		</div>
+
+
+		<div class="ui-grid-solo" id='cl_add_button_div'>
+			<div class="ui-block-a">
+				<a href="#" id='cl_add_button' data-role="button" data-icon="plus" data-mini="true">Add a set</a>
+			</div>
+		</div>
+
+		<br><br>
+
+		<div class="ui-grid-b">
+			<div class="ui-block-a"><a href="#menu" data-role="button" data-theme="b" data-mini="true" >Le Menu</a></div>
+			<div class="ui-block-b" style="width:28%;">&nbsp;</div>
+			<div class="ui-block-c" style="width:32%;"><button type="v" data-theme="a" data-mini="true" style="width:15%; padding:0px; margin-left:-10px;">Submit</button></div>
+		</div>
+
+
+	</div><!-- /content -->
+</div>
+<!-- /page -->
 
 
 
