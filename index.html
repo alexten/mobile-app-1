@@ -72,6 +72,8 @@
 
 <!-- Start of Bench page -->
 <div data-role="page" id="bench">
+<form id='bp_form' action='/cgi/pumpTracker.php' method=POST>
+<input type=hidden name=ex value='bp'>
 
 	<div data-role="header" data-theme="c">
 		<h1>Bench press</h1>
@@ -149,11 +151,13 @@
 		<div class="ui-grid-b">
 			<div class="ui-block-a"><a href="#menu" data-role="button" data-theme="b" data-mini="true" >Le Menu</a></div>
 			<div class="ui-block-b" style="width:28%;">&nbsp;</div>
-			<div class="ui-block-c" style="width:32%;"><button type="v" data-theme="a" data-mini="true" style="width:15%; padding:0px; margin-left:-10px;">Submit</button></div>
+			<div class="ui-block-c" style="width:32%;" id='bp_submit'><button type="v" data-theme="a" data-mini="true" style="width:15%; padding:0px; margin-left:-10px;">Submit</button></div>
 		</div>
 
 
 	</div><!-- /content -->
+
+</form>
 </div>
 <!-- /page -->
 
@@ -161,6 +165,8 @@
 
 <!-- Start of Handcleans page -->
 <div data-role="page" id="handcleans">
+<form id='hc_form' action='/cgi/pumpTracker.php' method=POST>
+<input type=hidden name=ex value='hc'>
 
 	<div data-role="header" data-theme="b">
 		<h1>Hand Cleans</h1>
@@ -238,11 +244,13 @@
 		<div class="ui-grid-b">
 			<div class="ui-block-a"><a href="#menu" data-role="button" data-theme="b" data-mini="true" >Le Menu</a></div>
 			<div class="ui-block-b" style="width:28%;">&nbsp;</div>
-			<div class="ui-block-c" style="width:32%;"><button type="v" data-theme="a" data-mini="true" style="width:15%; padding:0px; margin-left:-10px;">Submit</button></div>
+			<div class="ui-block-c" style="width:32%;" id='hc_submit'><button type="v" data-theme="a" data-mini="true" style="width:15%; padding:0px; margin-left:-10px;">Submit</button></div>
 		</div>
 
 
 	</div><!-- /content -->
+
+</form>
 </div>
 <!-- /page -->
 
@@ -251,6 +259,8 @@
 
 <!-- Start of DL page -->
 <div data-role="page" id="deadlift">
+<form id='dl_form' action='/cgi/pumpTracker.php' method=POST>
+<input type=hidden name=ex value='dl'>
 
 	<div data-role="header" data-theme="a">
 		<h1>Deadlift</h1>
@@ -328,18 +338,21 @@
 		<div class="ui-grid-b">
 			<div class="ui-block-a"><a href="#menu" data-role="button" data-theme="b" data-mini="true" >Le Menu</a></div>
 			<div class="ui-block-b" style="width:28%;">&nbsp;</div>
-			<div class="ui-block-c" style="width:32%;"><button type="v" data-theme="a" data-mini="true" style="width:15%; padding:0px; margin-left:-10px;">Submit</button></div>
+			<div class="ui-block-c" style="width:32%;" id='dl_submit'><button type="v" data-theme="a" data-mini="true" style="width:15%; padding:0px; margin-left:-10px;">Submit</button></div>
 		</div>
 
 
 	</div><!-- /content -->
+
+</form>
 </div>
 <!-- /page -->
 
 
-
 <!-- Start of Cleans page -->
 <div data-role="page" id="cleans">
+<form id='cleans_form' action='/cgi/pumpTracker.php' method=POST>
+<input type=hidden name=ex value='cleans'>
 
 	<div data-role="header" data-theme="c">
 		<h1>Cleans</h1>
@@ -417,11 +430,13 @@
 		<div class="ui-grid-b">
 			<div class="ui-block-a"><a href="#menu" data-role="button" data-theme="b" data-mini="true" >Le Menu</a></div>
 			<div class="ui-block-b" style="width:28%;">&nbsp;</div>
-			<div class="ui-block-c" style="width:32%;"><button type="v" data-theme="a" data-mini="true" style="width:15%; padding:0px; margin-left:-10px;">Submit</button></div>
+			<div class="ui-block-c" id='cleans_submit' style="width:32%;"><button type="v" data-theme="a" data-mini="true" style="width:15%; padding:0px; margin-left:-10px;">Submit</button></div>
 		</div>
 
 
 	</div><!-- /content -->
+
+</form>
 </div>
 <!-- /page -->
 
@@ -432,9 +447,10 @@
 
 
 
-
 <!-- Start of Jogging page -->
 <div data-role="page" id="jogging">
+<form id='jogg_form' action='/cgi/pumpTracker.php' method=POST>
+<input type=hidden name=ex value='jogg'>
 
 	<div data-role="header" data-theme="e">
 		<h1>Jogging</h1>
@@ -470,11 +486,12 @@
 		<div class="ui-grid-a">
 			<div class="ui-block-a"><a href="#menu" data-role="button" data-theme="b" data-mini="true" >Le Menu</a></div>
 			
-			<div class="ui-block-b"><button type="v" data-theme="a" data-mini="true" style="width:15%; padding:0px; margin-left:-10px;">Submit</button></div>
+			<div class="ui-block-b" id='jogg_submit'><button type="v" data-theme="a" data-mini="true" style="width:15%; padding:0px; margin-left:-10px;">Submit</button></div>
 		
 		</div>
 	</div><!-- /content -->
 
+</form>
 </div>
 <!-- /page -->
 

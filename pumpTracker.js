@@ -23,6 +23,34 @@ $(document).ready(function() {
 		cl_sets = generic_add_set('cl', cl_sets);
 	});
 
+
+	$('#cleans_submit').click(function() {
+		$('#cleans_form').submit();
+		window.location.href = '/jmb/';
+	});
+
+	$('#dl_submit').click(function() {
+		$('#dl_form').submit();
+		window.location.href = '/jmb/';
+	});
+
+	$('#hc_submit').click(function() {
+		$('#hc_form').submit();
+		window.location.href = '/jmb/';
+	});
+
+	$('#bp_submit').click(function() {
+		$('#bp_form').submit();
+		window.location.href = '/jmb/';
+	});
+
+	$('#jogg_submit').click(function() {
+		$('#jogg_form').submit();
+		window.location.href = '/jmb/';
+	});
+
+
+
 	function generic_add_set(ex, count) {
 		if (count < 8) {
 			count++;
@@ -35,4 +63,9 @@ $(document).ready(function() {
 
 		return count;
 	}
+
+
+
+
+
 });
