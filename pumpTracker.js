@@ -1,4 +1,14 @@
 $(document).ready(function() {
+
+	var now = new Date();
+	$('#datetime').val(now.toISOString());
+
+	$('.subContentAccess').click(function() {
+		var dt_id = $(this).data("dt-id");
+		var element = $("#" + dt_id);
+		element.val($('#datetime').val());
+	});
+
 	var dl_sets = 5;
 	var bp_sets = 5;
 	var hc_sets = 5;
@@ -49,8 +59,6 @@ $(document).ready(function() {
 		window.location.href = '/jmb/';
 	});
 
-
-
 	function generic_add_set(ex, count) {
 		if (count < 8) {
 			count++;
@@ -63,9 +71,4 @@ $(document).ready(function() {
 
 		return count;
 	}
-
-
-
-
-
 });
