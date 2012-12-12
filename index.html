@@ -39,7 +39,7 @@
 	<div data-role="content">
 
 		<div class="ui-grid-b small">
-			<div class="ui-block-a"><input type="number" name="self_weight" placeholder='Self Weight' data-mini="true" style='width: 6em;'></div>
+			<div class="ui-block-a"><input type="number" id="self_weight" placeholder='Self Weight' data-mini="true" style='width: 6em;'></div>
 			<div class="ui-block-b"><input type="datetime" id='datetime' placeholder='Workout date' data-mini="true" style='width: 13.5em;'></div>
 			<div class="ui-block-c">&nbsp;</div>
 		</div>
@@ -61,16 +61,16 @@
 
 			<script>
 				var subContent = [
-					{ "caption": "Bench", "href": "#bench" ,"data-theme": "c", "data-transition": "pop", "dt_id": "bp_datetime"},
-					{ "caption": "Hand Cleans", "href": "#handcleans" ,"data-theme": "b", "data-transition": "slideup", "dt_id": "hc_datetime" },
-					{ "caption": "Deadlift", "href": "#deadlift" ,"data-theme": "a", "data-transition": "flip", "dt_id": "dl_datetime" },
-					{ "caption": "Jogging", "href": "#jogging" ,"data-theme": "e", "data-transition": "flow", "dt_id": "jogg_datetime" },
-					{ "caption": "Cleans", "href": "#cleans" ,"data-theme": "d", "data-transition": "turn", "dt_id": "cleans_datetime" }
+					{ "caption": "Bench", "href": "#bench" ,"data-theme": "c", "data-transition": "pop", "dt_id": "bp_datetime", "sw_id": "bp_sw"},
+					{ "caption": "Hand Cleans", "href": "#handcleans" ,"data-theme": "b", "data-transition": "slideup", "dt_id": "hc_datetime", "sw_id": "hc_sw" },
+					{ "caption": "Deadlift", "href": "#deadlift" ,"data-theme": "a", "data-transition": "flip", "dt_id": "dl_datetime", "sw_id": "dl_sw" },
+					{ "caption": "Jogging", "href": "#jogging" ,"data-theme": "e", "data-transition": "flow", "dt_id": "jogg_datetime", "sw_id": "jogg_sw" },
+					{ "caption": "Cleans", "href": "#cleans" ,"data-theme": "d", "data-transition": "turn", "dt_id": "cleans_datetime", "sw_id": "cleans_sw" }
 				];
 
 				var str;
 				for (obj in subContent) {
-					str = '<li data-theme="' + subContent[obj]['data-theme'] + '" class="subContentAccess" data-dt-id="' + subContent[obj]['dt_id'] + '"><a href="' + subContent[obj]['href']  + '" data-transition="' + subContent[obj]['data-transition'] + '">' + subContent[obj]['caption'] + '</a></li>';
+					str = '<li data-theme="' + subContent[obj]['data-theme'] + '" class="subContentAccess" data-dt-id="' + subContent[obj]['dt_id'] + '" data-sw-id="' + subContent[obj]['sw_id'] + '"><a href="' + subContent[obj]['href']  + '" data-transition="' + subContent[obj]['data-transition'] + '">' + subContent[obj]['caption'] + '</a></li>';
 					document.write(str);
 				}
 			</script>
@@ -90,6 +90,7 @@
 <form id='bp_form' action='/cgi/pumpTracker.php' method=POST>
 <input type=hidden name=ex value='bp' />
 <input type=hidden name=datetime id='bp_datetime'>
+<input type=hidden name='self_weight' id="bp_sw">
 
 	<div data-role="header" data-theme="c">
 		<h1>Bench press</h1>
@@ -184,6 +185,7 @@
 <form id='hc_form' action='/cgi/pumpTracker.php' method=POST>
 <input type=hidden name=ex value='hc'>
 <input type=hidden name=datetime id='hc_datetime'>
+<input type=hidden name='self_weight' id="hc_sw">
 
 	<div data-role="header" data-theme="b">
 		<h1>Hand Cleans</h1>
@@ -279,6 +281,7 @@
 <form id='dl_form' action='/cgi/pumpTracker.php' method=POST>
 <input type=hidden name=ex value='dl'>
 <input type=hidden name=datetime id='dl_datetime'>
+<input type=hidden name='self_weight' id="dl_sw">
 
 	<div data-role="header" data-theme="a">
 		<h1>Deadlift</h1>
@@ -372,6 +375,7 @@
 <form id='cleans_form' action='/cgi/pumpTracker.php' method=POST>
 <input type=hidden name=ex value='cleans'>
 <input type=hidden name=datetime id='cleans_datetime'>
+<input type=hidden name='self_weight' id="cleans_sw">
 
 	<div data-role="header" data-theme="c">
 		<h1>Cleans</h1>
@@ -471,6 +475,7 @@
 <form id='jogg_form' action='/cgi/pumpTracker.php' method=POST>
 <input type=hidden name=ex value='jogg'>
 <input type=hidden name=datetime id='jogg_datetime'>
+<input type=hidden name='self_weight' id="jogg_sw">
 
 	<div data-role="header" data-theme="e">
 		<h1>Jogging</h1>

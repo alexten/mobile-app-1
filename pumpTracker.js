@@ -5,8 +5,13 @@ $(document).ready(function() {
 
 	$('.subContentAccess').click(function() {
 		var dt_id = $(this).data("dt-id");
-		var element = $("#" + dt_id);
-		element.val($('#datetime').val());
+		var sw_id = $(this).data("sw-id");
+
+		var dtElement = $("#" + dt_id);
+		var swElement = $("#" + sw_id);
+
+		dtElement.val($('#datetime').val());
+		swElement.val($('#self_weight').val());
 	});
 
 	var dl_sets = 5;
